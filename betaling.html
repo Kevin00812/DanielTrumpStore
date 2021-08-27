@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"/>
+ <title>Kasse</title>
+<style>
+
+body{
+    background-image: url(https://image.freepik.com/free-vector/payment-background-design_1212-566.jpg);
+}
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 35px;
+}
+h1 {
+    size: 1000000px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 50px;
+}
+
+form{
+    font-size: 35px;
+}
+
+</style>
+
+
+ <script type="text/javascript">
+ 
+ function kortnummer(){
+ var melding = document.getElementById('Ditt Kortnummer:');
+ var Kortnummer = document.getElementById('Kortnummer');
+ var formContent = document.getElementById('skrivKort');
+ 
+ melding.innerHTML = "Ditt Kortnummer: "+Kortnummer.value+"";
+ 
+ formContent.innerHTML = ""; 
+ }
+ 
+ function cvv(){
+ var melding2 = document.getElementById('Din CVV:');
+ var CVV = document.getElementById('Kortnummer');
+ var formContent = document.getElementById('SkrivCVV');
+ 
+ melding2.innerHTML = "Din CVV: "+CVV.value+"";
+ 
+ formContent.innerHTML = ""; 
+ }
+ 
+ function dato(){
+ var melding3 = document.getElementById('Kortets utløpsdato:');
+ var Dato = document.getElementById('Kortnummer');
+ var formContent = document.getElementById('skrivDato');
+ 
+ melding3.innerHTML = "Kortets utløpsdato: "+Dato.value+"";
+ 
+ formContent.innerHTML = ""; 
+ }
+ 
+</script>
+ 
+</head>
+<body>
+    <!--Tilbake knapp-->
+    <form action="index.html">
+        <input type="submit" value="Tilbake til forsiden"/>
+    </form>
+    <h1>Kasse</h1>
+    <!--Kortnummer-->
+ 
+    <p id="Ditt Kortnummer:"></p>
+    <form id="skrivKort">
+     Kortnummer:<input type="text" id="Kortnummer"/><br/>
+     <input type="button" value="Submit" onclick="kortnummer();"/>
+    </form>
+    <!--cvv-->
+
+    <p id="Din CVV:"></p>
+    <form id="SkrivCVV">
+     CVV:<input type="text" id="Kortnummer"/><br/>
+     <input type="button" value="Submit" onclick="cvv();"/>
+    </form>
+    <!--Utløsdato-->
+
+    <p id="Kortets utløpsdato:"></p>
+    <form id="skrivDato">
+     Utløpsdato:<input type="text" id="Kortnummer"/><br/>
+     <input type="button" value="Submit" onclick="dato();"/>
+    </form>
+
+    <form action="bestillingFullført.html">
+        <input type="submit" value="Bestill Vare"/>
+    </form>
+ 
+</body>
+</html>
